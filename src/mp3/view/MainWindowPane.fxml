@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<BorderPane minHeight="400" minWidth="700" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mp3.controller.MP3EditorOverviewController">
+    <Group fx:id="root" layoutY="0" layoutX="0">
+        <Text fx:id="headerText"
+              layoutX="40.0"
+              layoutY="29.0"
+              text="Welcome to MP3 Editor - drag MP3 file here or browse" />
+        <TextField fx:id="pathOfFileToCutTextField"
+                   layoutX="40"
+                   layoutY="35"
+                   minWidth="509" promptText="Path to the file you want to trimm."/>
+        <CheckBox fx:id="saveAsNewFileCheckBox"
+                  layoutX="40"
+                  layoutY="70"
+                  text="Save as new file"
+                  selected="true"
+                  onAction="#handleSaveAsNewFileCheckBoxAction"/>
+
+        <CheckBox fx:id="saveToTheSameDirectoryCheckBox"
+                  layoutX="200"
+                  layoutY="70"
+                  text="Save to the same directory"
+                  selected="true"
+                  onAction="#handleSaveToTheSameDirectoryCheckBoxAction"/>
+
+        <TextField fx:id="savePathTextField"
+                   disable="true"
+                   layoutX="40.0"
+                   layoutY="96.0"
+                   minHeight="20"
+                   minWidth="509.0"
+                   prefHeight="31.0"
+                   prefWidth="509.0"
+                   promptText="Path to save file." />
+
+
+        <Button fx:id="chooseDirectoryToSaveButton"
+                text="Choose"
+                layoutX="580"
+                layoutY="96"
+                disable="true"
+                onAction="#handleChooseAction"/>
+    </Group>
+
+
+
+</BorderPane>
